@@ -7,8 +7,6 @@ var maxnum;
 function add(){
 	max = parseInt($("input1").value);
 	bommnumb = parseInt($("input2").value);
-	if($("input1").value=""||$("input2").value="")
-	{max=5;bommnumb=5;}
 	if(max>12){
 		$("input1").value="";
 		$("input2").value="";
