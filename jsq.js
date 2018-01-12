@@ -1,24 +1,28 @@
-﻿var boxarry=new Array();
+var boxarry=new Array();
 var boomarry=new Array();
-var max=5;//棋盘宽高 
-var bommnumb=5;// 炸弹数量
+var max;//棋盘宽高 
+var bommnumb;// 炸弹数量
 var cantc=false;
 var maxnum;
 function add(){
-	max = parseInt($("input1").value);
-	bommnumb = parseInt($("input2").value);
+	var i1=$("input1").value;
+	var i2=$("input2").value;
+	max = parseInt(i1);
+	bommnumb = parseInt(i2);
+	if(i1==""||i2=="")
+		{max=5;bommnumb=5;}
 	if(max>12){
 		$("input1").value="";
 		$("input2").value="";
 		$("show").innerHTML="煞笔吗!!!放不下啦！";
-		add();
+		max=5;bommnumb=5;
 	}
 	if(bommnumb>=max*max)
 	{
 		$("input1").value="";
 		$("input2").value="";
 		$("show").innerHTML="煞笔吗!!!地雷这么多！";
-		add();
+		max=5;bommnumb=5;
 	}
 	maxnum=max*max;
 	cantc=false;
